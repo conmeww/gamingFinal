@@ -1,0 +1,103 @@
+<div id="popup-one" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17 1.73205C18.8564 0.660254 21.1436 0.660254 23 1.73205L34.3205 8.26795C36.1769 9.33975 37.3205 11.3205 37.3205 13.4641V26.5359C37.3205 28.6795 36.1769 30.6603 34.3205 31.732L23 38.2679C21.1436 39.3397 18.8564 39.3397 17 38.2679L5.67949 31.732C3.82308 30.6603 2.67949 28.6795 2.67949 26.5359V13.4641C2.67949 11.3205 3.82308 9.33975 5.67949 8.26795L17 1.73205Z"
+            fill="#0F0F0F"
+          />
+          <rect
+            x="14"
+            y="24.8643"
+            width="15.3642"
+            height="1.70713"
+            rx="0.853567"
+            transform="rotate(-45 14 24.8643)"
+            fill="#4BB5F0"
+          />
+          <rect
+            x="15.207"
+            y="14"
+            width="15.3642"
+            height="1.70713"
+            rx="0.853567"
+            transform="rotate(45 15.207 14)"
+            fill="#4BB5F0"
+          />
+        </svg>
+      </button>
+      <form class="form form-modal" action="#" name="form-modal">
+        <div class="form__content">
+          <p class="form__title form-modal__title">
+            Получите консультацию специалиста:
+          </p>
+
+          <div class="input-field sm-mrg">
+            <input
+              data-error="Введен не верный E-mail"
+              data-required="name"
+              type="text"
+              name="form[1]"
+            />
+            <label class="input-label">
+              <span>Ваше имя</span>
+            </label>
+          </div>
+
+          <div class="input-field sm-mrg">
+            <input
+              data-error="Введен не верный E-mail"
+              data-required="name"
+              type="text"
+              name="form[1]"
+              id="phone-inp"
+            />
+            <label class="input-label">
+              <span>Номер телефона</span>
+            </label>
+          </div>
+
+          <div class="checkbox checkbox__modal">
+            <span class="checkbox__bg"
+              ><svg
+                width="32"
+                height="36"
+                viewBox="0 0 32 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.5 0.866026C15.4282 0.330127 16.5718 0.330127 17.5 0.866025L30.0885 8.13398C31.0167 8.66987 31.5885 9.66025 31.5885 10.7321V25.268C31.5885 26.3397 31.0167 27.3301 30.0885 27.866L17.5 35.134C16.5718 35.6699 15.4282 35.6699 14.5 35.134L1.91154 27.866C0.983339 27.3301 0.411543 26.3397 0.411543 25.268V10.732C0.411543 9.66025 0.98334 8.66987 1.91154 8.13398L14.5 0.866026Z"
+                  fill="#0F0F0F"
+                />
+              </svg>
+            </span>
+            <input
+              class="checkbox-input"
+              data-required="checkbox"
+              id="cm_1"
+              data-error="Ошибка"
+              type="checkbox"
+              value="1"
+              name="form[]"
+            />
+
+            <label for="cm_1"
+              >Соглашаюсь на обработку персональных данных</label
+            >
+          </div>
+        </div>
+        <button type="submit" class="btn btn--underlined" disabled>
+          Отправить
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

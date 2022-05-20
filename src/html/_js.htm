@@ -1,0 +1,50 @@
+<script src="js/app.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script
+  src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ea3b87b4-72fb-487e-9070-ac17499e5cb6"
+  type="text/javascript"
+></script>
+<script>
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map(
+      "map",
+      {
+        center: [59.969871, 30.413075],
+        zoom: 15,
+        controls: [
+          "zoomControl",
+          "searchControl",
+          "typeSelector",
+          "fullscreenControl",
+          "routeButtonControl",
+        ],
+      },
+      {
+        searchControlProvider: "yandex#search",
+      }
+    );
+    var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+      preset: "islands#redDotIcon",
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+
+    //скролл внутри карты, но отключение зума при скролле страницы
+    myMap.behaviors.disable(["scrollZoom"]);
+    var body = document.getElementsByTagName("body")[0];
+    body.onkeydown = callbackDown;
+    body.onkeyup = callbackUp;
+
+    function callbackDown(e) {
+      if (e.keyCode === 17) {
+        myMap.behaviors.enable(["scrollZoom"]);
+      }
+    }
+
+    function callbackUp(e) {
+      if (e.keyCode === 17) {
+        myMap.behaviors.disable(["scrollZoom"]);
+      }
+    }
+  });
+</script>

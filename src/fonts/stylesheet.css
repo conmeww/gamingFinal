@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-BoldItalic.eot');
+    src: local('Frederik Bold Italic'), local('Frederik-BoldItalic'),
+        url('Frederik-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-BoldItalic.woff2') format('woff2'),
+        url('Frederik-BoldItalic.woff') format('woff'),
+        url('Frederik-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-MediumItalic.eot');
+    src: local('Frederik Medium Italic'), local('Frederik-MediumItalic'),
+        url('Frederik-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-MediumItalic.woff2') format('woff2'),
+        url('Frederik-MediumItalic.woff') format('woff'),
+        url('Frederik-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-Heavy.eot');
+    src: local('Frederik Heavy'), local('Frederik-Heavy'),
+        url('Frederik-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-Heavy.woff2') format('woff2'),
+        url('Frederik-Heavy.woff') format('woff'),
+        url('Frederik-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-DemiBold.eot');
+    src: local('Frederik DemiBold'), local('Frederik-DemiBold'),
+        url('Frederik-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-DemiBold.woff2') format('woff2'),
+        url('Frederik-DemiBold.woff') format('woff'),
+        url('Frederik-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-ThinItalic.eot');
+    src: local('Frederik Thin Italic'), local('Frederik-ThinItalic'),
+        url('Frederik-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-ThinItalic.woff2') format('woff2'),
+        url('Frederik-ThinItalic.woff') format('woff'),
+        url('Frederik-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-Bold.eot');
+    src: local('Frederik Bold'), local('Frederik-Bold'),
+        url('Frederik-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-Bold.woff2') format('woff2'),
+        url('Frederik-Bold.woff') format('woff'),
+        url('Frederik-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-UltraLightItalic.eot');
+    src: local('Frederik UltraLight Italic'), local('Frederik-UltraLightItalic'),
+        url('Frederik-UltraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-UltraLightItalic.woff2') format('woff2'),
+        url('Frederik-UltraLightItalic.woff') format('woff'),
+        url('Frederik-UltraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-Medium.eot');
+    src: local('Frederik Medium'), local('Frederik-Medium'),
+        url('Frederik-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-Medium.woff2') format('woff2'),
+        url('Frederik-Medium.woff') format('woff'),
+        url('Frederik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-LightItalic.eot');
+    src: local('Frederik Light Italic'), local('Frederik-LightItalic'),
+        url('Frederik-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-LightItalic.woff2') format('woff2'),
+        url('Frederik-LightItalic.woff') format('woff'),
+        url('Frederik-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-UltraLight.eot');
+    src: local('Frederik UltraLight'), local('Frederik-UltraLight'),
+        url('Frederik-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-UltraLight.woff2') format('woff2'),
+        url('Frederik-UltraLight.woff') format('woff'),
+        url('Frederik-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-ExtraBoldItalic.eot');
+    src: local('Frederik ExtraBold Italic'), local('Frederik-ExtraBoldItalic'),
+        url('Frederik-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-ExtraBoldItalic.woff2') format('woff2'),
+        url('Frederik-ExtraBoldItalic.woff') format('woff'),
+        url('Frederik-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-Thin.eot');
+    src: local('Frederik Thin'), local('Frederik-Thin'),
+        url('Frederik-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-Thin.woff2') format('woff2'),
+        url('Frederik-Thin.woff') format('woff'),
+        url('Frederik-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-HeavyItalic.eot');
+    src: local('Frederik Heavy Italic'), local('Frederik-HeavyItalic'),
+        url('Frederik-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-HeavyItalic.woff2') format('woff2'),
+        url('Frederik-HeavyItalic.woff') format('woff'),
+        url('Frederik-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-BlackItalic.eot');
+    src: local('Frederik Black Italic'), local('Frederik-BlackItalic'),
+        url('Frederik-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-BlackItalic.woff2') format('woff2'),
+        url('Frederik-BlackItalic.woff') format('woff'),
+        url('Frederik-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-RegularItalic.eot');
+    src: local('Frederik Regular Italic'), local('Frederik-RegularItalic'),
+        url('Frederik-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-RegularItalic.woff2') format('woff2'),
+        url('Frederik-RegularItalic.woff') format('woff'),
+        url('Frederik-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-DemiBoldItalic.eot');
+    src: local('Frederik DemiBold Italic'), local('Frederik-DemiBoldItalic'),
+        url('Frederik-DemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-DemiBoldItalic.woff2') format('woff2'),
+        url('Frederik-DemiBoldItalic.woff') format('woff'),
+        url('Frederik-DemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-Black.eot');
+    src: local('Frederik Black'), local('Frederik-Black'),
+        url('Frederik-Black.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-Black.woff2') format('woff2'),
+        url('Frederik-Black.woff') format('woff'),
+        url('Frederik-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-Regular.eot');
+    src: local('Frederik Regular'), local('Frederik-Regular'),
+        url('Frederik-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-Regular.woff2') format('woff2'),
+        url('Frederik-Regular.woff') format('woff'),
+        url('Frederik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-ExtraBold.eot');
+    src: local('Frederik ExtraBold'), local('Frederik-ExtraBold'),
+        url('Frederik-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-ExtraBold.woff2') format('woff2'),
+        url('Frederik-ExtraBold.woff') format('woff'),
+        url('Frederik-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frederik';
+    src: url('Frederik-Light.eot');
+    src: local('Frederik Light'), local('Frederik-Light'),
+        url('Frederik-Light.eot?#iefix') format('embedded-opentype'),
+        url('Frederik-Light.woff2') format('woff2'),
+        url('Frederik-Light.woff') format('woff'),
+        url('Frederik-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+

@@ -1,0 +1,43 @@
+<form class="form form-body" action="#" name="form-body">
+  <div class="form__content">
+    <p class="form__title">Получите консультацию специалиста:</p>
+    <div class="input-field">
+      <input
+        data-error="Введен не верный E-mail"
+        data-required="name"
+        type="text"
+        name="form[1]"
+      />
+      <label class="input-label">
+        <span>Ваше имя</span>
+      </label>
+    </div>
+
+    <div class="input-field">
+      <input
+        data-error="Введен не верный E-mail"
+        data-required="name"
+        type="text"
+        name="form[1]"
+        id="phone-inp"
+      />
+      <label class="input-label">
+        <span>Номер телефона</span>
+      </label>
+    </div>
+
+    <div class="checkbox">
+      <input
+        class="checkbox-input"
+        data-required="checkbox"
+        id="c_1"
+        data-error="Ошибка"
+        type="checkbox"
+        value="1"
+        name="form[]"
+      />
+      <label for="c_1">Соглашаюсь на обработку персональных данных</label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn--underlined" disabled>Отправить</button>
+</form>
