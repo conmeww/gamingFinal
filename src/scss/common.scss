@@ -328,7 +328,7 @@ input:-internal-autofill-selected {
 
 //============================================FORM SECTION
 .form-section {
-  background-image: url(../img/contact-bg.png);
+  background-image: url(../img/contact-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 53.125vw; // 1020px;
@@ -373,7 +373,7 @@ input[type="text"] {
   display: block;
   width: 100%;
   height: 100%;
-  padding-bottom: 0.625vw;
+  padding-bottom: 0.3vw;
   transition: all 0.3s;
   color: $third-color;
   background: transparent;
@@ -392,7 +392,7 @@ input:focus {
   border-color: #2b96f1;
 }
 input:focus + label {
-  transform: translateY(-17px);
+  transform: translateY(-1.5vw);
 }
 
 .input-label {
@@ -414,7 +414,7 @@ input:focus + label {
   top: 0;
 
   transition: transform 400ms ease;
-  transform: translateY(-17px);
+  transform: translateY(-1.5vw);
 
   position: absolute;
 
@@ -448,6 +448,7 @@ input:focus + label {
     min-width: 91.797vw;
     height: 50.391vw;
     border-radius: 1.042vw;
+    filter: grayscale(100%);
   }
 
   .map-sm {
@@ -492,7 +493,7 @@ input:focus + label {
   }
   .form-body {
     width: 100%;
-    background-image: url(../img/contact-bg.png);
+    background-image: url(../img/contact-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 80vw;

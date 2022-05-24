@@ -5,15 +5,15 @@ import { flsModules } from "./modules.js";
 
 import IMask from "imask";
 // input mask
-// let phoneinp = document.querySelectorAll(".phone-num");
+let phoneinp = document.querySelectorAll(".phone-num");
 
-// phoneinp.forEach((num) => {
-//   Inputmask({
-//     mask: "+7(999) 999-99-99",
-//     showMaskOnFocus: true,
-//     showMaskOnHover: false,
-//   }).mask(num);
-// });
+phoneinp.forEach((num) => {
+  Inputmask({
+    mask: "+7(999) 999-99-99",
+    showMaskOnFocus: true,
+    showMaskOnHover: false,
+  }).mask(num);
+});
 
 // const checkboxGroup = document.querySelectorAll('.checkbox')
 // checkboxGroup.forEach(checkbox => {
@@ -474,224 +474,211 @@ export let formValidate = {
 };
 /// send form 1
 
-document.querySelector(".form-header").addEventListener("submit", (e) => {
+document.querySelector(".form-header").addEventListener("submit", (e => {
+  e.preventDefault();
+  if (document.getElementById("c_1").checked) {
+      let self = e.currentTarget;
+      let formData = new FormData(self);
+      let phone = self.querySelector('[name="phone-head"]').value.replace(/[^+\d]/g, "");
+      let name = self.querySelector('[name="name-head"]').value;
+      formData.append("Телефон", phone);
+      formData.append("Имя", name);
+      if (phone.length >= 12) {
+          let xhr = new XMLHttpRequest;
+          xhr.onreadystatechange = function() {
+              if (4 === xhr.readyState) if (200 === xhr.status) {
+                  console.log("send");
+                  setTimeout((() => {
+                      alert("Вам скоро перезвонят!");
+                  }), 300);
+              }
+          };
+          xhr.open("POST", "mailform-order.php", true);
+          xhr.send(formData);
+          self.reset();
+        
+      }
+  } else if (document.getElementById("c_1").checked = false) alert("Заполните поля корректно!");
+}));
+document.querySelector(".form-order").addEventListener("submit", (e => {
+  e.preventDefault();
+  if (document.getElementById("c_3").checked) {
+      let self = e.currentTarget;
+      let formData = new FormData(self);
+      let phone = self.querySelector('[name="phone_1"]').value.replace(/[^+\d]/g, "");
+      let name = self.querySelector('[name="name_1"]').value;
+      formData.append("Телефон", phone);
+      formData.append("Имя", name);
+      if (phone.length >= 12) {
+          let xhr = new XMLHttpRequest;
+          xhr.onreadystatechange = function() {
+              if (4 === xhr.readyState) if (200 === xhr.status) {
+                  console.log("send");
+                  setTimeout((() => {
+                      alert("Вам скоро перезвонят!");
+                  }), 300);
+              }
+          };
+          xhr.open("POST", "mailform-order.php", true);
+          xhr.send(formData);
+          self.reset();
+         
+      }
+  } else if (document.getElementById("c_3").checked = false) alert("Заполните поля корректно!");
+}));
+document.querySelector(".form-plan1").addEventListener("submit", (e => {
+  e.preventDefault();
+  if (document.getElementById("p_1").checked) {
+      let self = e.currentTarget;
+      let formData = new FormData(self);
+      let phone = self.querySelector('[name="phone_plan1"]').value.replace(/[^+\d]/g, "");
+      let name = self.querySelector('[name="name-plan1"]').value;
+      formData.append("Телефон", phone);
+      formData.append("Имя", name);
+      if (phone.length >= 12) {
+          let xhr = new XMLHttpRequest;
+          xhr.onreadystatechange = function() {
+              if (4 === xhr.readyState) if (200 === xhr.status) {
+                  console.log("send");
+                  setTimeout((() => {
+                      alert("Вам скоро перезвонят!");
+                  }), 300);
+              }
+          };
+          xhr.open("POST", "mailform-plan1.php", true);
+          xhr.send(formData);
+          self.reset();
+          
+      }
+  } else if (document.getElementById("p_1").checked = false) alert("Заполните поля корректно!");
+}));
+document.querySelector(".form-plan2").addEventListener("submit", (e => {
+  e.preventDefault();
+  if (document.getElementById("p_2").checked) {
+      let self = e.currentTarget;
+      let formData = new FormData(self);
+      let phone = self.querySelector('[name="phone-plan2"]').value.replace(/[^+\d]/g, "");
+      let name = self.querySelector('[name="name-plan2"]').value;
+      formData.append("Телефон", phone);
+      formData.append("Имя", name);
+      if (phone.length >= 12) {
+          let xhr = new XMLHttpRequest;
+          xhr.onreadystatechange = function() {
+              if (4 === xhr.readyState) if (200 === xhr.status) {
+                  console.log("send");
+                  setTimeout((() => {
+                      alert("Вам скоро перезвонят!");
+                  }), 300);
+              }
+          };
+          xhr.open("POST", "mailform-plan2.php", true);
+          xhr.send(formData);
+          self.reset();
+       
+      }
+  } else if (document.getElementById("p_2").checked = false) alert("Заполните поля корректно!");
+}));
+document.querySelector(".form-plan3").addEventListener("submit", (e => {
+  e.preventDefault();
+  if (document.getElementById("p_3").checked) {
+      let self = e.currentTarget;
+      let formData = new FormData(self);
+      let phone = self.querySelector('[name="phone-plan3"]').value.replace(/[^+\d]/g, "");
+      let name = self.querySelector('[name="name-plan3"]').value;
+      formData.append("Телефон", phone);
+      formData.append("Имя", name);
+      if (phone.length >= 12) {
+          let xhr = new XMLHttpRequest;
+          xhr.onreadystatechange = function() {
+              if (4 === xhr.readyState) if (200 === xhr.status) {
+                  console.log("send");
+                  setTimeout((() => {
+                      alert("Вам скоро перезвонят!");
+                  }), 300);
+              }
+          };
+          xhr.open("POST", "mailform-plan3.php", true);
+          xhr.send(formData);
+          self.reset();
+         
+      }
+  } else if (document.getElementById("p_3").checked = false) alert("Заполните поля корректно!");
+}));
+document.querySelector(".form-favs").addEventListener("submit", (e => {
   e.preventDefault();
   let self = e.currentTarget;
-  let formData = new FormData(self);
-
-  let phone = self.querySelector('[name="phone-head"]').value;
-  let name = self.querySelector('[name="name-head"]').value;
-  formData.append("Телефон", phone);
-  formData.append("Имя", name);
-
-  if (name.length > 10 && phone.length < 3) {
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          console.log("send");
-          setTimeout(() => {
-            alert("Вам скоро перезвонят!");
-          }, 300);
-        }
+  if (document.getElementById("c_favs").checked) {
+      let formData = new FormData(self);
+      let phone = self.querySelector('[name="phone-favs"]').value.replace(/[^+\d]/g, "");
+      let name = self.querySelector('[name="name-favs"]').value;
+      formData.append("Телефон", phone);
+      formData.append("Имя", name);
+      if (phone.length >= 12) {
+          let xhr = new XMLHttpRequest;
+          xhr.onreadystatechange = function() {
+              if (4 === xhr.readyState) if (200 === xhr.status) {
+                  console.log("send");
+                  setTimeout((() => {
+                      alert("Вам скоро перезвонят!");
+                  }), 300);
+              }
+          };
+          xhr.open("POST", "mailform-favs.php", true);
+          xhr.send(formData);
+          self.reset();
+       
       }
-    };
-    xhr.open("POST", "mailform-one.php", true);
-    xhr.send(formData);
-    self.reset();
-    console.log(phone.length);
-  } else {
-    alert(1);
-  }
-});
-/// forms order
-
-document.querySelector(".form-order").addEventListener("submit", (e) => {
+  } else if (document.getElementById("c_favs").checked = false) alert("Заполните поля корректно!");
+}));
+document.querySelector(".form-decor").addEventListener("submit", (e => {
   e.preventDefault();
   let self = e.currentTarget;
-  let formData = new FormData(self);
-  let phone = self.querySelector('[name="phone_1"]').value;
-  let name = self.querySelector('[name="name_1"]').value;
-  formData.append("Телефон", phone);
-  formData.append("Имя", name);
-
-  let xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        console.log("send");
-        setTimeout(() => {
-          alert("Вам скоро перезвонят!");
-        }, 300);
+  if (document.getElementById("c_3").checked) {
+      let formData = new FormData(self);
+      let phone = self.querySelector('[name="phone-decor"]').value.replace(/[^+\d]/g, "");
+      let name = self.querySelector('[name="name-decor"]').value;
+      formData.append("Телефон", phone);
+      formData.append("Имя", name);
+      if (phone.length >= 12) {
+          let xhr = new XMLHttpRequest;
+          xhr.onreadystatechange = function() {
+              if (4 === xhr.readyState) if (200 === xhr.status) {
+                  console.log("send");
+                  setTimeout((() => {
+                      alert("Вам скоро перезвонят!");
+                  }), 300);
+              }
+          };
+          xhr.open("POST", "mailform-one.php", true);
+          xhr.send(formData);
+          self.reset();
+          
       }
-    }
-  };
-  xhr.open("POST", "mailform-order.php", true);
-  xhr.send(formData);
-  self.reset();
-});
-
-// form plan 1
-document.querySelector(".form-plan1").addEventListener("submit", (e) => {
+  } else if (document.getElementById("c_3").checked = false) alert("Заполните поля корректно!");
+}));
+document.querySelector(".form-body").addEventListener("submit", (e => {
   e.preventDefault();
-  let self = e.currentTarget;
-  let formData = new FormData(self);
-  let phone = self.querySelector('[name="phone-plan1"]').value;
-  let name = self.querySelector('[name="name-plan1"]').value;
-  if (phone.length === 17) {
-    formData.append("Телефон", phone);
-    formData.append("Имя", name);
-
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          console.log("send");
-          setTimeout(() => {
-            alert("Вам скоро перезвонят!");
-          }, 300);
-        }
+  if (document.getElementById("cs_1").checked) {
+      let self = e.currentTarget;
+      let formData = new FormData(self);
+      let phone = self.querySelector('[name="phone-fs"]').value.replace(/[^+\d]/g, "");
+      let name = self.querySelector('[name="name-fs"]').value;
+      formData.append("Телефон", phone);
+      formData.append("Имя", name);
+      if (phone.length >= 12) {
+          let xhr = new XMLHttpRequest;
+          xhr.onreadystatechange = function() {
+              if (4 === xhr.readyState) if (200 === xhr.status) {
+                  console.log("send");
+                  setTimeout((() => {
+                      alert("Вам скоро перезвонят!");
+                  }), 300);
+              }
+          };
+          xhr.open("POST", "mailform-body.php", true);
+          xhr.send(formData);
+          self.reset();
+        
       }
-    };
-    xhr.open("POST", "mailform-order.php", true);
-    xhr.send(formData);
-    self.reset();
-  }
-});
-/// form plan 2
-document.querySelector(".form-plan2").addEventListener("submit", (e) => {
-  e.preventDefault();
-  let self = e.currentTarget;
-  let formData = new FormData(self);
-  let phone = self.querySelector('[name="phone-plan2"]').value;
-  let name = self.querySelector('[name="name-plan2"]').value;
-  if (phone.length === 17) {
-    formData.append("Телефон", phone);
-    formData.append("Имя", name);
-
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          console.log("send");
-          setTimeout(() => {
-            alert("Вам скоро перезвонят!");
-          }, 300);
-        }
-      }
-    };
-    xhr.open("POST", "mailform-order.php", true);
-    xhr.send(formData);
-    self.reset();
-  }
-});
-/// form plan 3
-document.querySelector(".form-plan3").addEventListener("submit", (e) => {
-  e.preventDefault();
-  let self = e.currentTarget;
-  let formData = new FormData(self);
-  let phone = self.querySelector('[name="phone-plan3"]').value;
-  let name = self.querySelector('[name="name-plan3"]').value;
-  if (phone.length === 17) {
-    formData.append("Телефон", phone);
-    formData.append("Имя", name);
-
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          console.log("send");
-          setTimeout(() => {
-            alert("Вам скоро перезвонят!");
-          }, 300);
-        }
-      }
-    };
-    xhr.open("POST", "mailform-order.php", true);
-    xhr.send(formData);
-    self.reset();
-  }
-});
-/// form favs
-document.querySelector(".form-favs").addEventListener("submit", (e) => {
-  e.preventDefault();
-  let self = e.currentTarget;
-  let formData = new FormData(self);
-  let phone = self.querySelector('[name="phone-favs"]').value;
-  let name = self.querySelector('[name="name-favs"]').value;
-  if (phone.length === 17) {
-    formData.append("Телефон", phone);
-    formData.append("Имя", name);
-
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          console.log("send");
-          setTimeout(() => {
-            alert("Вам скоро перезвонят!");
-          }, 300);
-        }
-      }
-    };
-    xhr.open("POST", "mailform-order.php", true);
-    xhr.send(formData);
-    self.reset();
-  }
-});
-/// form decor
-document.querySelector(".form-decor").addEventListener("submit", (e) => {
-  e.preventDefault();
-  let self = e.currentTarget;
-  let formData = new FormData(self);
-  let phone = self.querySelector('[name="phone-decor"]').value;
-  let name = self.querySelector('[name="name-decor"]').value;
-
-  if (phone.length === 17) {
-    formData.append("Телефон", phone);
-    formData.append("Имя", name);
-
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          console.log("send");
-          setTimeout(() => {
-            alert("Вам скоро перезвонят!");
-          }, 300);
-        }
-      }
-    };
-    xhr.open("POST", "mailform-order.php", true);
-    xhr.send(formData);
-    self.reset();
-  }
-});
-
-/// form body
-document.querySelector(".form-body").addEventListener("submit", (e) => {
-  e.preventDefault();
-  let self = e.currentTarget;
-  let formData = new FormData(self);
-  let phone = self.querySelector('[name="phone-fs"]').value;
-  let name = self.querySelector('[name="name-fs"]').value;
-  if (phone.length === 17) {
-    formData.append("Телефон", phone);
-    formData.append("Имя", name);
-
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          console.log("send");
-          setTimeout(() => {
-            alert("Вам скоро перезвонят!");
-          }, 300);
-        }
-      }
-    };
-    xhr.open("POST", "mailform-order.php", true);
-    xhr.send(formData);
-    self.reset();
-  }
-});
+  } else if (document.getElementById("cs_1").checked = false) alert("Заполните поля корректно!");
+}));

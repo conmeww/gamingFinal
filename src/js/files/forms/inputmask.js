@@ -16,6 +16,6 @@ const headerPhoneInput = document.getElementById("phone_head");
 flsModules.inputmask = Inputmask({
   mask: "+7(999) 999-99-99",
   isComplete: function () {
-    alert(1);
+    // alert(1);
   },
 }).mask(headerPhoneInput);

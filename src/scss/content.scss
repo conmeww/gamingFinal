@@ -277,6 +277,7 @@
 }
 .projects__description,
 .projects__img {
+  border-radius: 1.042vw;
   img {
     border-radius: 1.042vw; // 20px;
   }
@@ -1214,7 +1215,7 @@
   }
   .form-header {
     width: 80vw;
-    height: 90vw;
+    height: 100vw;
     top: 19.5vw;
     padding: 3.125vw 5vw 10vw 5vw;
     left: 50%;
@@ -1252,7 +1253,7 @@
     left: 50%;
   }
   .form-header__title {
-    padding-bottom: 7vw;
+    padding-bottom: 12vw;
   }
   .checkbox__bg svg {
     width: 6vw;
@@ -1276,7 +1277,7 @@
   }
 
   .input-field:first-of-type {
-    margin-bottom: 7vw;
+    margin-bottom: 12vw;
   }
   .sm-mrg:last-of-type {
     margin-bottom: 7vw;
@@ -1347,10 +1348,6 @@
   }
   .swiper-nav .swiper-button-next {
     right: 3vw;
-  }
-  .logo-box {
-    left: 58%;
-    transform: translateX(-50%);
   }
 
   .popup__close svg {

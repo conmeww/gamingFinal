@@ -34,68 +34,29 @@
           />
         </svg>
       </button>
-      <form
-        class="form form-modal form-plan3"
-        name="form-plan3"
-        id="form-order"
-        action="mailform-plan3.php"
-        method="POST"
-      >
+  		<form class="form form-modal form-plan3" name="form-plan3" id="form-order" action="mailform-plan3.php" method="POST">
         <div class="form__content">
           <p class="form__title form-modal__title">
             Получите консультацию специалиста:
           </p>
 
           <div class="input-field sm-mrg">
-            <input
-              data-error="Введено некорректное имя"
-              data-required="name"
-              type="text"
-              data-validate
-              required
-              name="name-plan3"
-            />
+            <input data-error="Введено некорректное имя" data-required="name" type="text" data-validate required name="name-plan3" />
             <label class="input-label" for="name-plan3">Ваше имя</label>
           </div>
 
           <div class="input-field sm-mrg">
-            <input
-              data-error="Введен некорректный номер телефона"
-              class="phone-num"
-              data-validate
-              required
-              type="text"
-              name="phone-plan3"
-            />
+            <input data-error="Введен некорректный номер телефона" class="phone-num" data-validate required id="phone_p1" type="text" name="phone-plan3" />
+
             <label class="input-label" for="phone-plan3">Номер телефона</label>
           </div>
           <div class="checkbox">
-            <span class="checkbox__bg"
-              ><svg
-                width="32"
-                height="36"
-                viewBox="0 0 32 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.5 0.866026C15.4282 0.330127 16.5718 0.330127 17.5 0.866025L30.0885 8.13398C31.0167 8.66987 31.5885 9.66025 31.5885 10.7321V25.268C31.5885 26.3397 31.0167 27.3301 30.0885 27.866L17.5 35.134C16.5718 35.6699 15.4282 35.6699 14.5 35.134L1.91154 27.866C0.983339 27.3301 0.411543 26.3397 0.411543 25.268V10.732C0.411543 9.66025 0.98334 8.66987 1.91154 8.13398L14.5 0.866026Z"
-                  fill="#0F0F0F"
-                />
+            <span class="checkbox__bg"><svg width="32" height="36" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5 0.866026C15.4282 0.330127 16.5718 0.330127 17.5 0.866025L30.0885 8.13398C31.0167 8.66987 31.5885 9.66025 31.5885 10.7321V25.268C31.5885 26.3397 31.0167 27.3301 30.0885 27.866L17.5 35.134C16.5718 35.6699 15.4282 35.6699 14.5 35.134L1.91154 27.866C0.983339 27.3301 0.411543 26.3397 0.411543 25.268V10.732C0.411543 9.66025 0.98334 8.66987 1.91154 8.13398L14.5 0.866026Z" fill="#0F0F0F" />
               </svg>
             </span>
-            <input
-              id="p_3"
-              class="checkbox__input"
-              type="checkbox"
-              value="1"
-              name="p_3"
-              data-required="checkbox"
-              checked
-            />
-            <label for="p_3" class="checkbox__label"
-              >Соглашаюсь на обработку персональных данных</label
-            >
+            <input id="p_3" class="checkbox__input" type="checkbox" value="1" name="p_3" data-required="checkbox" checked />
+            <label for="p_3" class="checkbox__label">Соглашаюсь на обработку персональных данных</label>
           </div>
         </div>
         <button type="submit" class="btn btn--underlined">Отправить</button>
