@@ -1,4 +1,3 @@
-
 window["FLS"] = true;
 
 // Подключение основного файла стилей
@@ -16,27 +15,20 @@ flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
 flsFunctions.menuInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
-// flsFunctions.fullVHfix();
-
+flsFunctions.fullVHfix();
 
 import "./libs/popup.js";
 
-import * as flsForms from "./files/forms/forms.js";
+//
 
-
-flsForms.formFieldsInit({ viewPass: false });
-
+//flsForms.formFieldsInit({ viewPass: false });
 
 import "./files/forms/inputmask.js";
 
-
 import "./files/sliders.js";
-
 
 import * as flsScroll from "./files/scroll/scroll.js";
 
-
 flsScroll.pageNavigation();
-
 
 import "./files/script.js";

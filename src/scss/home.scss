@@ -1,3 +1,80 @@
-//====================================================================================================
+.checkwrap {
+  cursor: pointer;
+  position: relative;
+  margin-top: 11px;
+}
+.table-label {
+  font-size: 14px;
+  line-height: 17px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.table-checkbox {
+  display: none;
+  position: relative;
+  cursor: pointer;
+}
+.castom-checkbox {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
 
-//====================================================================================================
+  border-radius: 1px;
+  margin-right: 5px;
+  margin-bottom: -2px;
+  position: relative;
+  padding-top: 10px;
+  pointer-events: all;
+  z-index: 20;
+  svg {
+    pointer-events: all;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+  }
+}
+
+.castom-checkbox::after {
+  position: absolute;
+  content: "";
+  background: url("../img/in-fav.svg") no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.castom-checkbox.active::after {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.item__bottom-promo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.checkwrap {
+  background: transparent;
+  bottom: 3rem;
+  right: 3rem;
+
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: 9;
+}

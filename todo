@@ -21,3 +21,26 @@ menu space li top botto m
 
 
         align favs icons
+
+
+
+
+            <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        @@include('html/_article.htm',{}) @@include('html/_advantages.htm',{})
+        @@include('html/_examples.htm',{}) @@include('html/_game-design.htm',{})
+        @@include('html/_logos-slider.htm',{}) @@include('html/_plans.htm',{})
+        @@include('html/_form-section.htm',{})
+        @@include('html/_projects.htm',{})
+        @@include('html/_decor-slider.htm',{}) @@include('html/_reviews.htm',{})
+        @@include('html/_contacts.htm',{})
+        @@include('html/_banner-bottom.htm',{})
+        @@include('html/_form-plan-one.htm',{})
+        @@include('html/_form-plan-two.htm',{})
+        @@include('html/_form-plan-three.htm',{})
+        @@include('html/_form-favs.htm',{}) @@include('html/_form-order.htm',{})
+        @@include('html/_form-decor-price.htm',{})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>

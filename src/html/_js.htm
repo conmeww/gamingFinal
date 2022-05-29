@@ -1,50 +1,65 @@
 <script src="js/app.min.js"></script>
 <script src="https://unpkg.com/imask"></script>
-<script
-  src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ea3b87b4-72fb-487e-9070-ac17499e5cb6"
-  type="text/javascript"
-></script>
+
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js?_v=20220525145542"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js?_v=20220525145542"></script>
+
 <script>
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map(
-      "map",
+  mapboxgl.accessToken =
+    "pk.eyJ1IjoiYWtvdCIsImEiOiJjbDNsY3VxbW0wNG1zM3BwbWl1cXkyNTU3In0.UH9GIgm6oCoeVokpYpvTyw";
+  var map = new mapboxgl.Map({
+    container: "map",
+    style: "mapbox://styles/mapbox/dark-v9",
+    center: [30.413075, 59.969871],
+    zoom: 15,
+  });
+  mapboxgl.setRTLTextPlugin(
+    "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js"
+  );
+  var mapboxLanguage = new MapboxLanguage({
+    defaultLanguage: "ru",
+  });
+
+  map.addControl(mapboxLanguage);
+  const places = {
+    type: "FeatureCollection",
+    features: [
       {
-        center: [59.969871, 30.413075],
-        zoom: 15,
-        controls: [
-          "zoomControl",
-          "searchControl",
-          "typeSelector",
-          "fullscreenControl",
-          "routeButtonControl",
-        ],
+        type: "Feature",
+        properties: {
+          description: "Gaming Setup",
+          icon: "marker-15",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [30.413075, 59.969871],
+        },
       },
-      {
-        searchControlProvider: "yandex#search",
-      }
-    );
-    var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-      preset: "islands#redDotIcon",
+    ],
+  };
+
+  map.on("load", () => {
+    // Add a GeoJSON source containing place coordinates and information.
+    map.addSource("places", {
+      type: "geojson",
+      data: places,
     });
 
-    myMap.geoObjects.add(myPlacemark);
+    map.addLayer({
+      id: "poi-labels",
+      type: "symbol",
+      source: "places",
+      layout: {
+        "text-field": ["get", "description"],
+        "text-variable-anchor": ["top", "bottom", "left", "right"],
+        "text-radial-offset": 0.5,
+        "text-justify": "auto",
+        "icon-image": ["get", "icon"],
+      },
+    });
 
-    //скролл внутри карты, но отключение зума при скролле страницы
-    myMap.behaviors.disable(["scrollZoom"]);
-    var body = document.getElementsByTagName("body")[0];
-    body.onkeydown = callbackDown;
-    body.onkeyup = callbackUp;
-
-    function callbackDown(e) {
-      if (e.keyCode === 17) {
-        myMap.behaviors.enable(["scrollZoom"]);
-      }
-    }
-
-    function callbackUp(e) {
-      if (e.keyCode === 17) {
-        myMap.behaviors.disable(["scrollZoom"]);
-      }
-    }
+    map.rotateTo(180, {
+      duration: 10000,
+    });
   });
 </script>

@@ -328,7 +328,7 @@ input:-internal-autofill-selected {
 
 //============================================FORM SECTION
 .form-section {
-  background-image: url(../img/contact-bg.jpg);
+  background-image: url(../img/contact-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 53.125vw; // 1020px;
@@ -563,4 +563,9 @@ input:focus + label {
   .input-label {
     transform: translateY(0px);
   }
+}
+a.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-bottom-right > .mapboxgl-ctrl-attrib.mapboxgl-compact::after,
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+  display: none !important;
 }
